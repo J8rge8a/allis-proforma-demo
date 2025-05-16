@@ -1,0 +1,11 @@
+
+<svg width="200" height="90" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 15C30 6.716 36.716 0 45 0H155C163.284 0 170 6.716 170 15V75C170 83.284 163.284 90 155 90H45C36.716 90 30 83.284 30 15Z" fill="#f8b3c2"/>
+  <path d="M50 25L55 55C55 65 75 65 75 55V25" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M85 25L85 55C85 65 105 65 105 55V25" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M115 25L115 55C115 65 135 65 135 55V25" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M145 25V55" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M135 55H155" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M40 70H160" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <text x="60" y="85" font-family="Arial" font-size="12" fill="#fff">HELADOS Y SNACKS</text>
+</svg>
