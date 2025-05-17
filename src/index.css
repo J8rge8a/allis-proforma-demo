@@ -2,12 +2,4 @@
 @tailwind base;
 @tailwind components;
 
-/* 2. En la capa "base", fija el background del <body> */
-@layer base {
-  body {
-    /* usa tu color de Tailwind definido en tailwind.config.ts */
-    background-color: theme('colors.background');
-  }
-}
-
 @tailwind utilities;

@@ -59,14 +59,5 @@ const config: Config = {
     animatePlugin, // tailwindcss-animate
   ],
 }
-// tailwind.config.ts
-export default {
-  // …
-  safelist: [
-    'bg-allis-rosa',
-    'bg-allis-celeste',
-    'bg-allis-amarillo',
-    // cualquier otra variante dinámica
-  ],
-}
+
 export default config
