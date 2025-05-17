@@ -31,7 +31,7 @@ export function ProductsTable({
 }: Props) {
   return (
     <div className="overflow-x-auto w-full">
-      <table className="w-full table-auto text-sm bg-white shadow rounded">
+      <table className="w-full table-auto text-base bg-white shadow rounded">
         <thead>
           <tr className="bg-allis-celeste">
             <th className="px-2 py-1 text-center">Producto</th>
@@ -68,9 +68,10 @@ export function ProductsTable({
                   <input
                     type="number"
                     min={0}
-                    value={r.cantidad}
-                    onChange={e =>
-                      onQuantityChange(i, Number(e.target.value))
+                    value={r.cantidad === 0 ? '' : r.cantidad}
+                      onChange={e => {
+                        const val = e.target.value
+                        onQuantityChange(i, val === '' ? 0 : Number(val))}
                     }
                     className="mx-auto block w-20 p-1 outline-none bg-transparent text-center"
                   />
