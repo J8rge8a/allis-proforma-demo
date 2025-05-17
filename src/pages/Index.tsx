@@ -1,7 +1,7 @@
 // src/pages/Index.tsx
 import React, { useState, useMemo, useRef } from 'react'
 import html2canvas from 'html2canvas'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/header'
 import { ProductsTable } from '@/components/ProductsTable'
 import productsData from '@/data/productos.json'
 
