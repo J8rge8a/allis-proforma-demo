@@ -76,9 +76,9 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-6">
-            <img src={logo} alt="Alli's Logo" className="h-24" />
+            <img src={logo} alt="Alli's Logo" className="h-[300px] w-auto mx-auto mb-0" />
           </div>
-          <CardTitle className="text-2xl">Proformas Alli's</CardTitle>
+          <CardTitle className="text-2xl">Generador de Proformas</CardTitle>
           <CardDescription>
             Ingrese la contraseña para continuar
           </CardDescription>

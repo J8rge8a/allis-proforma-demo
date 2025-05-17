@@ -1,31 +1,175 @@
+// src/pages/Index.tsx
+import React, { useState, useMemo, useRef } from 'react'
+import html2canvas from 'html2canvas'
+import { Header } from '@/components/Header'
+import { ProductsTable } from '@/components/ProductsTable'
+import productsData from '@/data/productos.json'
 
-import React, { useState, useEffect } from 'react';
-import Auth from '../components/Auth';
-import Proforma from '../components/Proforma';
+type AvailableProduct = {
+  codigo: string
+  nombre: string
+  precio: number
+}
 
-const Index = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+type Row = {
+  codigo: string
+  nombre: string
+  precio: number
+  cantidad: number
+}
 
-  // Verificar si hay una sesión guardada
-  useEffect(() => {
-    const authStatus = sessionStorage.getItem('allisAuth');
-    if (authStatus === 'true') {
-      setIsAuthenticated(true);
-    }
-  }, []);
+export default function Index() {
+  const availableProducts: AvailableProduct[] = productsData
 
-  const handleLogin = () => {
-    sessionStorage.setItem('allisAuth', 'true');
-    setIsAuthenticated(true);
-  };
+  const [rows, setRows] = useState<Row[]>(
+    Array.from({ length: 12 }, () => ({
+      codigo: '',
+      nombre: '',
+      precio: 0,
+      cantidad: 0,
+    }))
+  )
 
-  // Si no está autenticado, mostrar pantalla de login
-  if (!isAuthenticated) {
-    return <Auth onLogin={handleLogin} />;
+  const [isExporting, setIsExporting] = useState(false)
+
+  const handleProductChange = (index: number, codigo: string) => {
+    const prod = availableProducts.find(p => p.codigo === codigo)
+    setRows(prev =>
+      prev.map((r, i) =>
+        i === index && prod
+          ? {
+              codigo: prod.codigo,
+              nombre: prod.nombre,
+              precio: prod.precio,
+              cantidad: 0,
+            }
+          : i === index
+          ? { codigo: '', nombre: '', precio: 0, cantidad: 0 }
+          : r
+      )
+    )
   }
 
-  // Si está autenticado, mostrar la proforma
-  return <Proforma />;
-};
+  const handleQuantityChange = (index: number, cantidad: number) => {
+    setRows(prev =>
+      prev.map((r, i) => (i === index ? { ...r, cantidad } : r))
+    )
+  }
 
-export default Index;
+  const total = useMemo(
+    () =>
+      rows
+        .reduce((sum, r) => sum + r.precio * r.cantidad, 0)
+        .toLocaleString('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }),
+    [rows]
+  )
+
+  const proformaRef = useRef<HTMLDivElement>(null)
+
+  const exportToJpg = async () => {
+    setIsExporting(true)
+    await new Promise(resolve => setTimeout(resolve, 50)) // Pequeña espera visual
+
+    if (!proformaRef.current) return
+
+    // Reemplazar inputs y selects por spans para la captura
+    const container = proformaRef.current
+    const elements = Array.from(
+      container.querySelectorAll<HTMLInputElement | HTMLSelectElement>(
+        'input, select'
+      )
+    )
+    const backups = elements.map(el => {
+      const span = document.createElement('span')
+      if (el instanceof HTMLInputElement) {
+        span.textContent = el.value
+      } else {
+      const selectedText = el.options[el.selectedIndex]?.text || ''
+      span.textContent = selectedText
+
+      // Si el select no tiene valor (está en "--Selecciona--"), ocultarlo en exportación
+        if (el.value === '') {
+        span.style.color = '#ffffff' // blanco para fondo blanco
+  }
+      }
+      span.className = el.className
+      span.style.cssText = getComputedStyle(el).cssText
+      el.style.display = 'none'
+      el.parentElement?.appendChild(span)
+      return { el, span }
+    })
+
+    const canvas = await html2canvas(container, {
+      scale: 2,
+      backgroundColor: '#ffffff',
+    })
+
+    backups.forEach(({ el, span }) => {
+      el.style.display = ''
+      span.remove()
+    })
+
+    setIsExporting(false)
+
+    canvas.toBlob(blob => {
+      if (!blob) return
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      const now = new Date()
+      const dd = String(now.getDate()).padStart(2, '0')
+      const mmm = now.toLocaleString('es-ES', { month: 'short' })
+      const clienteRaw =
+        sessionStorage.getItem('cliente') || 'sin_nombre'
+      const cliente = clienteRaw.trim().replace(/\s+/g, '_')
+      link.href = url
+      link.download = `proforma_allis_${cliente}_${dd}_${mmm}.jpg`
+      link.click()
+      URL.revokeObjectURL(url)
+    }, 'image/jpeg', 0.9)
+  }
+
+  return (
+    <main className="p-4 bg-white rounded shadow space-y-4">
+      <div
+        ref={proformaRef}
+        className="mx-auto w-full max-w-[600px] bg-white p-4 rounded"
+      >
+        <Header />
+
+        <ProductsTable
+          rows={rows}
+          availableProducts={availableProducts}
+          onProductChange={handleProductChange}
+          onQuantityChange={handleQuantityChange}
+          isExporting={isExporting}
+        />
+
+        <div className="flex justify-end pr-4 mt-4">
+          <div className="bg-allis-celeste p-2 rounded shadow w-full text-right">
+            <span className="font-semibold">Total:</span>{' '}
+            <span className="font-bold">C${total}</span>
+          </div>
+        </div>
+
+        <footer className="mt-6 text-center text-sm text-gray-600 space-y-1">
+          <div>Alli&apos;s Helados & Snacks</div>
+          <div>Sandra Morazan</div>
+          <div>Teléfono: +505 8661-8838</div>
+          <div>¡Gracias por su preferencia!</div>
+        </footer>
+      </div>
+
+      <div className="flex justify-center">
+        <button
+          onClick={exportToJpg}
+          className="bg-allis-celeste hover:bg-allis-rosa text-black font-semibold py-2 px-4 rounded"
+        >
+          Descargar JPG
+        </button>
+      </div>
+    </main>
+  )
+}

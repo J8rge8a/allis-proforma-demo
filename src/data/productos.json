@@ -1,115 +1,32 @@
-
 [
-  {
-    "codigo": "H001",
-    "nombre": "Helado de Vainilla",
-    "um": "UND",
-    "precio": 35.50,
-    "imagen": "helado_vainilla.jpg"
-  },
-  {
-    "codigo": "H002",
-    "nombre": "Helado de Chocolate",
-    "um": "UND",
-    "precio": 40.00,
-    "imagen": "helado_chocolate.jpg"
-  },
-  {
-    "codigo": "H003",
-    "nombre": "Helado de Fresa",
-    "um": "UND",
-    "precio": 38.50,
-    "imagen": "helado_fresa.jpg"
-  },
-  {
-    "codigo": "S001",
-    "nombre": "Sundae Caramelo",
-    "um": "UND",
-    "precio": 55.00,
-    "imagen": "sundae_caramelo.jpg"
-  },
-  {
-    "codigo": "S002",
-    "nombre": "Sundae Chocolate",
-    "um": "UND",
-    "precio": 55.00,
-    "imagen": "sundae_chocolate.jpg"
-  },
-  {
-    "codigo": "P001",
-    "nombre": "Paleta de Frutas",
-    "um": "UND",
-    "precio": 25.00,
-    "imagen": "paleta_frutas.jpg"
-  },
-  {
-    "codigo": "C001",
-    "nombre": "Cono Simple",
-    "um": "UND",
-    "precio": 30.00,
-    "imagen": "cono_simple.jpg"
-  },
-  {
-    "codigo": "C002",
-    "nombre": "Cono Doble",
-    "um": "UND",
-    "precio": 45.00,
-    "imagen": "cono_doble.jpg"
-  },
-  {
-    "codigo": "B001",
-    "nombre": "Banana Split",
-    "um": "UND",
-    "precio": 75.00,
-    "imagen": "banana_split.jpg"
-  },
-  {
-    "codigo": "M001",
-    "nombre": "Malteada Vainilla",
-    "um": "UND",
-    "precio": 65.00,
-    "imagen": "malteada_vainilla.jpg"
-  },
-  {
-    "codigo": "M002",
-    "nombre": "Malteada Chocolate",
-    "um": "UND",
-    "precio": 65.00,
-    "imagen": "malteada_chocolate.jpg"
-  },
-  {
-    "codigo": "M003",
-    "nombre": "Malteada Fresa",
-    "um": "UND",
-    "precio": 65.00,
-    "imagen": "malteada_fresa.jpg"
-  },
-  {
-    "codigo": "E001",
-    "nombre": "Ensalada de Frutas",
-    "um": "UND",
-    "precio": 50.00,
-    "imagen": "ensalada_frutas.jpg"
-  },
-  {
-    "codigo": "T001",
-    "nombre": "Torta Helada pequeña",
-    "um": "UND",
-    "precio": 180.00,
-    "imagen": "torta_helada_pequena.jpg"
-  },
-  {
-    "codigo": "T002",
-    "nombre": "Torta Helada mediana",
-    "um": "UND",
-    "precio": 290.00,
-    "imagen": "torta_helada_mediana.jpg"
-  },
-  {
-    "codigo": "T003",
-    "nombre": "Torta Helada grande",
-    "um": "UND",
-    "precio": 420.00,
-    "imagen": "torta_helada_grande.jpg"
-  }
+  { "codigo": "ML01", "nombre": "Chocolate",           "precio": 18.00 },
+  { "codigo": "ML02", "nombre": "Cono",                "precio": 22.00 },
+  { "codigo": "MP01", "nombre": "Fruta Rellena",       "precio": 17.00 },
+  { "codigo": "MP02", "nombre": "2x1",                 "precio": 15.00 },
+  { "codigo": "MP03", "nombre": "Cocoa",               "precio": 17.00 },
+  { "codigo": "ML03", "nombre": "Sandwich",            "precio": 22.00 },
+  { "codigo": "ML04", "nombre": "Conobola",            "precio": 22.00 },
+  { "codigo": "MP04", "nombre": "Coco",                "precio": 15.00 },
+  { "codigo": "MEO1", "nombre": "Tazas 3oz.",          "precio": 17.00 },
+  { "codigo": "ML05", "nombre": "Napolitana",          "precio": 17.00 },
+  { "codigo": "ML06", "nombre": "Dulce de leche",      "precio": 15.00 },
+  { "codigo": "ML07", "nombre": "Crema con galleta",   "precio": 17.00 },
+  { "codigo": "ME07", "nombre": "Rolinpin",            "precio": 10.00 },
+  { "codigo": "ME02", "nombre": "Tacitas 8 Oz",        "precio": 40.00 },
+  { "codigo": "ME03", "nombre": "1/2 litro",           "precio": 85.00 },
+  { "codigo": "ME04", "nombre": "Envase IL",           "precio": 150.00 },
+  { "codigo": "MP05", "nombre": "Fresa",               "precio": 15.00 },
+  { "codigo": "ML08", "nombre": "Yogurt",              "precio": 22.00 },
+  { "codigo": "ME06", "nombre": "Galon",               "precio": 360.00 },
+  { "codigo": "MP06", "nombre": "Oh Lala",             "precio": 17.00 },
+  { "codigo": "ML09", "nombre": "Super Eskimo",        "precio": 22.00 },
+  { "codigo": "ME05", "nombre": "Pichinga 1/2 gal",    "precio": 280.00 },
+  { "codigo": "MP07", "nombre": "Rocket",              "precio": 13.00 },
+  { "codigo": "MP08", "nombre": "Mango",               "precio": 15.00 },
+  { "codigo": "MP09", "nombre": "Avena",               "precio": 17.00 },
+  { "codigo": "MP10", "nombre": "Sandia",              "precio": 15.00 },
+  { "codigo": "ME08", "nombre": "Bandeja",             "precio": 400.00 },
+  { "codigo": "MP11", "nombre": "Tropical",            "precio": 15.00 },
+  { "codigo": "MP12", "nombre": "Navideña",            "precio": 17.00 }
 ]
+
