@@ -17,10 +17,10 @@ export function Header() {
       <div className="flex-shrink-0 flex flex-col items-center">
         <img
           src="/logo.png"
-          alt="Proformas Alli's"
+          alt="Facturass Alli's"
           className="h-[100px] w-auto"
         />
-        <h1 className="mt-2 text-2xl font-bold">PROFORMA</h1>
+        <h1 className="mt-2 text-2xl font-bold">FACTURA</h1>
         <span className="mt-1 text-sm font-semibold">
           Fecha: <span className="font-normal">{fecha}</span>
         </span>
