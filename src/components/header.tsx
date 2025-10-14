@@ -17,7 +17,7 @@ export function Header() {
       <div className="flex-shrink-0 flex flex-col items-center">
         <img
           src="/logo.png"
-          alt="Facturass Alli's"
+          alt="Facturas Alli's"
           className="h-[100px] w-auto"
         />
         <h1 className="mt-2 text-2xl font-bold">FACTURA</h1>
