@@ -11,7 +11,7 @@
   { "codigo": "ML05", "nombre": "Napolitana",          "precio": 17.00 },
   { "codigo": "ML06", "nombre": "Dulce de leche",      "precio": 15.00 },
   { "codigo": "ML07", "nombre": "Crema con galleta",   "precio": 17.00 },
-  { "codigo": "ME07", "nombre": "Rolinpin",            "precio": 10.00 },
+  { "codigo": "ME07", "nombre": "Rolinpin",            "precio": 8.00 },
   { "codigo": "ME02", "nombre": "Tacitas 8 Oz",        "precio": 40.00 },
   { "codigo": "ME03", "nombre": "1/2 litro",           "precio": 85.00 },
   { "codigo": "ME04", "nombre": "Envase IL",           "precio": 150.00 },
