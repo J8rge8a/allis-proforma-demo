@@ -1,4 +1,4 @@
-// src/components/Header.tsx
+// src/components/header.tsx
 import React, { useState, useEffect } from 'react'
 
 export function Header() {
