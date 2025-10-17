@@ -227,7 +227,7 @@ const descargarComoJPG = async () => {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
-                  <TableHead className="w-[160px] md:w-[180px] text-left truncate">Producto</TableHead>
+                  <TableHead className="w-[140px] md:w-[160px] text-left truncate">Producto</TableHead>
                   <TableHead className="w-[80px]">UM</TableHead>
                   <TableHead className="w-[60px] text-center">Cantidad</TableHead>
                   <TableHead className="w-[100px] text-right">P/U</TableHead>
