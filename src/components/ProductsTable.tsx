@@ -33,7 +33,7 @@ export function ProductsTable({
         <div
       className="
         w-full 
-        min-w-[420px] max-w-[800px] 
+        min-w-[480px] max-w-[800px] 
         mx-auto overflow-x-auto
         bg-white shadow rounded
       "
