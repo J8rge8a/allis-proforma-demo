@@ -15,9 +15,9 @@ export function Header() {
 <header
   className="
     w-full 
-    min-w-[360px] max-w-[800px]
+    min-w-[320px] max-w-[800px]
     flex flex-row justify-between items-start
-    flex-wrap
+    flex-wrap md:flex-nowrap
     p-4 bg-white shadow-sm gap-4 
     mx-auto
   "
@@ -27,11 +27,11 @@ export function Header() {
   }}
 >
       {/* Columna izquierda: logo, PROFORMA y fecha */}
-      <div className="flex-shrink-0 flex flex-col items-center">
+      <div className="flex-shrink-0 flex flex-col items-center w-[40%] sm:w-[35%] md:w-auto">
         <img
           src="/logo.png"
           alt="Proformas DEMO Alli's"
-          className="h-[100px] w-auto"
+          className="h-[70px] sm:h-[90px] md:h-[100px] w-auto mx-auto"
         />
         <h1 className="mt-2 text-2xl font-bold">PROFORMA DEMO</h1>
         <span className="mt-1 text-sm font-semibold">
@@ -40,7 +40,7 @@ export function Header() {
       </div>
 
       {/* Campos del cliente alineados verticalmente a la derecha */}
-      <div className="flex flex-col items-end space-y-3">
+      <div className="flex flex-col justify-center items-end space-y-2 w-[60%] sm:w-[65%] md:w-auto">
         <input
           type="text"
           id="cliente"
@@ -50,21 +50,21 @@ export function Header() {
             sessionStorage.setItem('cliente', e.target.value)
           }}
           placeholder="Cliente"
-          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={municipio}
           onChange={e => setMunicipio(e.target.value)}
           placeholder="Municipio"
-          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={telefono}
           onChange={e => setTelefono(e.target.value)}
           placeholder="Teléfono"
-          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
       </div>
     </header>
