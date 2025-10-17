@@ -186,7 +186,7 @@ const descargarComoJPG = async () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -196,7 +196,7 @@ const descargarComoJPG = async () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -206,7 +206,7 @@ const descargarComoJPG = async () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
