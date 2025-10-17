@@ -22,7 +22,7 @@ export default function Index() {
   const availableProducts: AvailableProduct[] = productsData
 
   const [rows, setRows] = useState<Row[]>(
-    Array.from({ length: 12 }, () => ({
+    Array.from({ length: 10 }, () => ({
       codigo: '',
       nombre: '',
       precio: 0,
