@@ -87,18 +87,18 @@ const Proforma: React.FC = () => {
         description: "Generando imagen de la proforma...",
       });
       
-      const canvas = await html2canvas(proformaRef.current, {
-      scale: 2,
-      useCORS: true,
-      logging: false,
-      backgroundColor: "#ffffff",
-      scrollX: 0,
-      scrollY: 0,
-      x: proformaRef.current.getBoundingClientRect().left,
-      y: proformaRef.current.getBoundingClientRect().top,
-      width: proformaRef.current.scrollWidth,
-      height: proformaRef.current.scrollHeight,
-      });
+// Captura con ancho fijo (mismo tamaño en móvil y escritorio)
+const exportWidth = 800; // ancho fijo de exportación (px)
+const scaleFactor = exportWidth / proformaRef.current.offsetWidth;
+
+const canvas = await html2canvas(proformaRef.current, {
+  scale: 2 * scaleFactor, // asegura buena calidad
+  useCORS: true,
+  logging: false,
+  backgroundColor: "#ffffff",
+  width: exportWidth,
+  height: proformaRef.current.scrollHeight * scaleFactor,
+});
       
       const image = canvas.toDataURL("image/jpeg", 0.9);
       
