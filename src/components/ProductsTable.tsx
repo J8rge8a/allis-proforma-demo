@@ -30,10 +30,8 @@ export function ProductsTable({
   isExporting,
 }: Props) {
   return (
-        <div
-      className="w-full max-w-[800px] mx-auto overflow-x-auto bg-white shadow rounded"
-    >
-      <table className="w-full min-w-[600px] table-auto text-sm sm:text-base border-collapse">
+      <div className="w-full max-w-[780px] mx-auto overflow-hidden bg-white shadow rounded">
+      <table className="w-full table-fixed text-sm sm:text-base border-collapse">
         <thead>
           <tr className="bg-allis-celeste">
             <th className="px-2 py-1 text-center whitespace-nowrap">Producto</th>
@@ -66,7 +64,7 @@ export function ProductsTable({
                 </td>
 
                 {/* Cantidad */}
-                <td className="border px-2 py-1 text-center">
+                <td className="border px-1 py-1 text-center w-[55px] sm:w-[65px]">
                   <input
                     type="number"
                     min={0}
@@ -85,7 +83,7 @@ export function ProductsTable({
                 </td>
 
                 {/* P/T */}
-                <td className="border px-2 py-1 text-right">
+                <td className="border px-2 py-1 text-right pr-3 w-[90px] sm:w-[100px]">
                   C$ {pt.toFixed(2)}
                 </td>
               </tr>
