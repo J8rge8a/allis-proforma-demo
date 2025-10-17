@@ -148,7 +148,7 @@ export default function Index() {
         />
 
         <div className="flex justify-end pr-4 mt-4">
-          <div className="bg-allis-celeste p-2 rounded shadow w-full text-right">
+          <div className="bg-allis-celeste p-2 rounded shadow w-full max-w-[750px] text-right">
             <span className="font-semibold">Total:</span>{' '}
             <span className="font-bold">C${total}</span>
           </div>
