@@ -12,15 +12,15 @@ export function Header() {
   }, [])
 
   return (
-        <header
-      className="
-        w-full 
-        min-w-[480px] max-w-[800px]
-        flex flex-col sm:flex-row sm:items-start sm:justify-between 
-        p-4 bg-white shadow-sm gap-4 
-        mx-auto
-      "
-    >
+<header
+  className="
+    w-full 
+    max-w-[800px]
+    flex flex-col sm:flex-row sm:items-start sm:justify-between 
+    p-3 sm:p-4 bg-white shadow-sm gap-4 
+    mx-auto
+  "
+>
       {/* Columna izquierda: logo, PROFORMA y fecha */}
       <div className="flex-shrink-0 flex flex-col items-center">
         <img
@@ -45,21 +45,21 @@ export function Header() {
             sessionStorage.setItem('cliente', e.target.value)
           }}
           placeholder="Cliente"
-          className="w-[260px] p-2 border rounded bg-allis-amarillo placeholder-gray-500 focus:outline-none text-right"
+          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={municipio}
           onChange={e => setMunicipio(e.target.value)}
           placeholder="Municipio"
-          className="w-[260px] p-2 border rounded bg-allis-amarillo placeholder-gray-500 focus:outline-none text-right"
+          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={telefono}
           onChange={e => setTelefono(e.target.value)}
           placeholder="Teléfono"
-          className="w-[260px] p-2 border rounded bg-allis-amarillo placeholder-gray-500 focus:outline-none text-right"
+          className="w-full sm:w-[260px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
       </div>
     </header>

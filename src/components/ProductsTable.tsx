@@ -31,20 +31,15 @@ export function ProductsTable({
 }: Props) {
   return (
         <div
-      className="
-        w-full 
-        min-w-[480px] max-w-[800px] 
-        mx-auto overflow-x-auto
-        bg-white shadow rounded
-      "
+      className="w-full max-w-[800px] mx-auto overflow-x-auto bg-white shadow rounded"
     >
-      <table className="w-full table-auto text-base bg-white shadow rounded">
+      <table className="w-full min-w-[600px] table-auto text-sm sm:text-base border-collapse">
         <thead>
           <tr className="bg-allis-celeste">
-            <th className="px-2 py-1 text-center">Producto</th>
-            <th className="px-2 py-1 text-center">Cantidad</th>
-            <th className="px-2 py-1 text-center">P/U</th>
-            <th className="px-2 py-1 text-center">P/T</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap">Producto</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap">Cantidad</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap">P/U</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap">P/T</th>
           </tr>
         </thead>
         <tbody>
@@ -53,7 +48,7 @@ export function ProductsTable({
             const ocultar = isExporting && pt === 0 ? 'text-white' : ''
 
             return (
-              <tr key={i} className={`even:bg-gray-50 ${ocultar}`}>
+              <tr key={i} className={`even:bg-gray-50 ${ocultar} transition-colors`}>
                 {/* Producto (select) */}
                 <td className="border px-2 py-1 text-left">
                   <select
@@ -80,7 +75,7 @@ export function ProductsTable({
                         const val = e.target.value
                         onQuantityChange(i, val === '' ? 0 : Number(val))}
                     }
-                    className="mx-auto block w-20 p-1 outline-none bg-transparent text-center"
+                    className="mx-auto block w-16 sm:w-20 p-1 outline-none bg-transparent text-center text-sm sm:text-base"
                   />
                 </td>
 

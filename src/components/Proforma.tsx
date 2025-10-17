@@ -37,7 +37,7 @@ const Proforma: React.FC = () => {
 
   // Cargar productos al iniciar
   useEffect(() => {
-    const productosConCantidad = productosData.map(p => ({ ...p, cantidad: 0 }));
+    const productosConCantidad = productosData.map(p => ({ ...p, cantidad: 0 })) as Producto[];
     setProductos(productosConCantidad);
   }, []);
 
@@ -118,8 +118,8 @@ const Proforma: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto p-4">
+    <div className="min-h-screen bg-white flex justify-center">
+      <div className="w-full max-w-[800px] mx-auto p-4">
         <div className="mb-6 pb-6 border-b">
           <Button 
             variant="outline" 
@@ -132,7 +132,7 @@ const Proforma: React.FC = () => {
 
         <div 
           ref={proformaRef} 
-          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 max-w-6xl mx-auto"
+          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[800px] mx-auto"
         >
           {/* Encabezado con logo y datos de cliente */}
           <div className="flex flex-col md:flex-row justify-between mb-6 pb-4 border-b">
@@ -150,7 +150,7 @@ const Proforma: React.FC = () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white"
+                    className="bg-white text-right"
                   />
                 </div>
                 <div>
@@ -160,7 +160,7 @@ const Proforma: React.FC = () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white"
+                    className="bg-white text-right"
                   />
                 </div>
                 <div>
@@ -170,7 +170,7 @@ const Proforma: React.FC = () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white"
+                    className="bg-white text-right"
                   />
                 </div>
                 <div>
@@ -186,7 +186,7 @@ const Proforma: React.FC = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="mb-6 overflow-x-auto">
+          <div className="mb-6 overflow-x-auto w-full max-w-[800px] mx-auto">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -241,7 +241,7 @@ const Proforma: React.FC = () => {
           </div>
 
           {/* Totales */}
-          <div className="flex flex-col items-end space-y-2 mb-6">
+          <div className="fflex flex-col items-end space-y-2 mb-6 w-full max-w-[800px] mx-auto">
             <div className="bg-allis-celeste py-2 px-4 rounded w-full md:w-64">
               <div className="flex justify-between">
                 <span className="font-medium">SUBTOTAL:</span>
