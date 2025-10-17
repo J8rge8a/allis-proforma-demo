@@ -135,7 +135,7 @@ export default function Index() {
     <main className="p-4 bg-white rounded shadow space-y-4">
       <div
         ref={proformaRef}
-        className="mx-auto w-full max-w-[600px] bg-white p-4 rounded"
+        className="mx-auto w-full max-w-[800px] bg-white p-4 rounded"
       >
         <Header />
 
@@ -157,7 +157,7 @@ export default function Index() {
         <footer className="mt-6 text-center text-sm text-gray-600 space-y-1">
           <div>Alli&apos;s Helados & Snacks</div>
           <div>Sandra Morazan</div>
-          <div>Teléfono: +505 8661-8838</div>
+          <div>Teléfono: +505 5887-1570</div>
           <div>¡Gracias por su preferencia!</div>
         </footer>
       </div>
