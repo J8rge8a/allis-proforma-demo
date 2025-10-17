@@ -31,10 +31,12 @@ export function Header() {
         <img
           src="/logo.png"
           alt="Proformas DEMO Alli's"
-          className="h-[70px] sm:h-[90px] md:h-[100px] w-auto mx-auto"
+          className="h-[70px] sm:h-[90px] md:h-[110px] w-auto mx-auto"
         />
-        <h1 className="mt-2 text-2xl font-bold">PROFORMA DEMO</h1>
-        <span className="mt-1 text-sm font-semibold">
+        <h1 className="mt-1 text-xl sm:text-2xl font-semibold leading-tight text-center">
+        PROFORMA DEMO
+        </h1>
+        <span className="mt-1 text-xs sm:text-sm font-semibold">
           Fecha: <span className="font-normal">{fecha}</span>
         </span>
       </div>
