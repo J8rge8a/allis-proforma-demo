@@ -278,13 +278,13 @@ const descargarComoJPG = async () => {
 
           {/* Totales */}
           <div className="fflex flex-col items-end space-y-2 mb-6 w-full max-w-[750px] mx-auto">
-            <div className="bg-allis-celeste py-2 px-4 rounded w-full md:w-64">
+            <div className="bg-allis-celeste py-2 px-4 rounded w-full md:w-74">
               <div className="flex justify-between">
                 <span className="font-medium">SUBTOTAL:</span>
                 <span>C$ {calcularTotal().toFixed(2)}</span>
               </div>
             </div>
-            <div className="bg-allis-rosa py-2 px-4 rounded w-full md:w-64">
+            <div className="bg-allis-rosa py-2 px-4 rounded w-full md:w-74">
               <div className="flex justify-between">
                 <span className="font-bold">TOTAL:</span>
                 <span className="font-bold">C$ {calcularTotal().toFixed(2)}</span>
