@@ -30,14 +30,14 @@ export function ProductsTable({
   isExporting,
 }: Props) {
   return (
-      <div className="w-full min-w-[360px] max-w-[750px] mx-auto overflow-hidden bg-white shadow rounded">
+      <div className="w-full min-w-[340px] max-w-[750px] mx-auto overflow-hidden bg-white shadow rounded">
       <table className="w-full table-fixed text-sm sm:text-base border-collapse">
         <thead>
           <tr className="bg-allis-celeste">
             <th className="px-2 py-1 text-left whitespace-nowrap w-[100px] sm:w-[170px]">Producto</th>
             <th className="px-1 py-1 text-center whitespace-nowrap w-[60px] sm:w-[70px]">Cant.</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap w-[75px] sm:w-[70px]">P/U</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap w-[85px] sm:w-[80px]">P/T</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap w-[70px] sm:w-[70px]">P/U</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap w-[95px] sm:w-[80px]">P/T</th>
           </tr>
         </thead>
         <tbody>
