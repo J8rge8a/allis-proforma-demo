@@ -176,7 +176,7 @@ const descargarComoJPG = async () => {
               <img src={logo} alt="Alli's" className="h-12 xs:h-14 sm:h-16 md:h-20" />
             </div>
             
-            <div className="bg-allis-amarillo p-4 rounded-lg w-[50%] sm:w-[55%] md:w-[60%] max-w-[460px]">
+            <div className="bg-allis-amarillo p-4 rounded-lg">
               <h2 className="font-bold text-lg mb-2">Datos del Cliente</h2>
               <div className="grid grid-cols-1 gap-3">
                 <div>
@@ -186,7 +186,7 @@ const descargarComoJPG = async () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95%] sm:w-[260px] md:w-[320px] lg:w-[360px] max-w-[95%] sm:max-w-[300px] md:max-w-[340px] lg:max-w-[380px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -196,7 +196,7 @@ const descargarComoJPG = async () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95%] sm:w-[260px] md:w-[320px] lg:w-[360px] max-w-[95%] sm:max-w-[300px] md:max-w-[340px] lg:max-w-[380px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -206,7 +206,7 @@ const descargarComoJPG = async () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95%] sm:w-[260px] md:w-[320px] lg:w-[360px] max-w-[95%] sm:max-w-[300px] md:max-w-[340px] lg:max-w-[380px]"
+                    className=" bg-white text-right h-10 text-[15px] px-3 w-[95vw] sm:w-[280px] md:w-[340px] lg:w-[400px] max-w-[90%] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px]"
                   />
                 </div>
                 <div>
