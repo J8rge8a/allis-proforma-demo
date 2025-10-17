@@ -197,7 +197,7 @@ const Proforma: React.FC = () => {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
-                  <TableHead>Producto</TableHead>
+                  <TableHead className="w-[180px] md:w-[200px]">Producto</TableHead>
                   <TableHead className="w-[80px]">UM</TableHead>
                   <TableHead className="w-[60px]">Cantidad</TableHead>
                   <TableHead className="w-[60px]">P/U (C$)</TableHead>
@@ -236,7 +236,7 @@ const Proforma: React.FC = () => {
                       <TableCell>
                         {producto.precio.toFixed(2)}
                       </TableCell>
-                      <TableCell className="text-right pr-2">
+                      <TableCell className="text-right pr-6">
                         {subtotal.toFixed(2)}
                       </TableCell>
                     </TableRow>
