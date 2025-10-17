@@ -52,21 +52,21 @@ export function Header() {
             sessionStorage.setItem('cliente', e.target.value)
           }}
           placeholder="Cliente"
-          className="w-full max-w-[220px] sm:max-w-[460px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[760px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={municipio}
           onChange={e => setMunicipio(e.target.value)}
           placeholder="Municipio"
-          className="w-full max-w-[220px] sm:max-w-[460px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[760px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
         <input
           type="text"
           value={telefono}
           onChange={e => setTelefono(e.target.value)}
           placeholder="Teléfono"
-          className="w-full max-w-[220px] sm:max-w-[460px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
+          className="w-full max-w-[220px] sm:max-w-[760px] p-2 border rounded bg-allis-amarillo text-center sm:text-right placeholder-gray-500 focus:outline-none"
         />
       </div>
     </header>
