@@ -159,67 +159,66 @@ const descargarComoJPG = async () => {
   >
     </div>  
           {/* Encabezado con logo y datos de cliente */}
-          <div
+<div
   className="
-    flex flex-col xs:flex-row justify-between items-start xs:items-center
+    flex flex-col md:flex-row md:justify-between md:items-start
     mb-6 pb-4 border-b
     w-full
     gap-4
   "
-  style={{
-    minWidth: "360px",
-    maxWidth: "800px",
-    flexWrap: "wrap",
-  }}
 >
-            <div className="flex items-center mb-4 md:mb-0">
-              <img src={logo} alt="Alli's" className="h-12 xs:h-14 sm:h-16 md:h-20" />
-            </div>
-            
-            <div className="bg-allis-amarillo p-4 rounded-lg">
-              <h2 className="font-bold text-lg mb-2">Datos del Cliente</h2>
-              <div className="grid grid-cols-1 gap-3">
-                <div>
-                  <label className="block text-sm font-medium">Nombre:</label>
-                  <Input
-                    name="nombre"
-                    value={cliente.nombre}
-                    onChange={handleClienteChange}
-                    placeholder="Nombre del cliente"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Municipio:</label>
-                  <Input
-                    name="municipio"
-                    value={cliente.municipio}
-                    onChange={handleClienteChange}
-                    placeholder="Municipio"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Teléfono:</label>
-                  <Input
-                    name="telefono"
-                    value={cliente.telefono}
-                    onChange={handleClienteChange}
-                    placeholder="Número de teléfono"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium">Fecha:</label>
-                  <Input
-                    value={fechaActual}
-                    readOnly
-                    className="bg-gray-50"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Logo y título */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left flex-shrink-0 md:w-1/2">
+    <img
+      src={logo}
+      alt="Alli's"
+      className="h-14 sm:h-16 md:h-20 mx-auto md:mx-0"
+    />
+    <h1 className="mt-2 text-2xl font-bold">PROFORMA DEMO</h1>
+    <span className="mt-1 text-sm font-semibold">
+      Fecha: <span className="font-normal">{fechaActual}</span>
+    </span>
+  </div>
+
+  {/* Datos del cliente */}
+  <div className="bg-allis-amarillo p-4 rounded-lg w-full md:w-auto md:max-w-[300px] mx-auto md:mx-0">
+    <h2 className="font-bold text-lg mb-2 text-center md:text-right">
+      Datos del Cliente
+    </h2>
+    <div className="grid grid-cols-1 gap-3">
+      <div>
+        <label className="block text-sm font-medium">Nombre:</label>
+        <Input
+          name="nombre"
+          value={cliente.nombre}
+          onChange={handleClienteChange}
+          placeholder="Nombre del cliente"
+          className="bg-white text-right h-10 text-[15px] px-3 w-full"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium">Municipio:</label>
+        <Input
+          name="municipio"
+          value={cliente.municipio}
+          onChange={handleClienteChange}
+          placeholder="Municipio"
+          className="bg-white text-right h-10 text-[15px] px-3 w-full"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium">Teléfono:</label>
+        <Input
+          name="telefono"
+          value={cliente.telefono}
+          onChange={handleClienteChange}
+          placeholder="Número de teléfono"
+          className="bg-white text-right h-10 text-[15px] px-3 w-full"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Tabla de productos */}
           <div className="mb-6 w-full">
