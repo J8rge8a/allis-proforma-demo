@@ -144,28 +144,33 @@ const descargarComoJPG = async () => {
           </Button>
         </div>
 
-        <div className="w-full flex justify-center">
-          <div
-          ref={proformaRef}
-          className="
-          proforma bg-white rounded-lg shadow-lg
-          p-4 md:p-6 
-          w-full max-w-[800px] min-w-[360px]
-          flex flex-col gap-4
-          scale-[0.98] sm:scale-100
-          transition-transform
-        "
-        >
+        <div className="flex justify-center w-screen">
+  <div
+    ref={proformaRef}
+    className="
+      proforma bg-white rounded-lg shadow-lg
+      p-4 md:p-6 
+      w-[90vw] sm:w-[600px] md:w-[800px]
+      min-w-[360px]
+      flex flex-col gap-4
+      mx-auto
+      overflow-hidden
+    "
+  >
     </div>  
           {/* Encabezado con logo y datos de cliente */}
           <div
-          className="
-          flex flex-row justify-between items-start
-          min-w-[650px] sm:min-w-[700px]
-          mb-6 pb-4 border-b
-          overflow-x-auto
-        "
-      >
+  className="
+    flex flex-row justify-between items-start
+    mb-6 pb-4 border-b
+    w-full
+  "
+  style={{
+    minWidth: "360px",
+    flexWrap: "nowrap",
+    alignItems: "flex-start",
+  }}
+>
             <div className="flex items-center mb-4 md:mb-0">
               <img src={logo} alt="Alli's" className="h-16 md:h-20" />
             </div>
@@ -180,7 +185,7 @@ const descargarComoJPG = async () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white text-right h-10 text-[15px] px-3"
+                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
                   />
                 </div>
                 <div>
@@ -190,7 +195,7 @@ const descargarComoJPG = async () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white text-right h-10 text-[15px] px-3"
+                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
                   />
                 </div>
                 <div>
@@ -200,7 +205,7 @@ const descargarComoJPG = async () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white text-right h-10 text-[15px] px-3"
+                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
                   />
                 </div>
                 <div>
