@@ -135,7 +135,7 @@ export default function Index() {
     <main className="p-4 bg-white rounded shadow space-y-4">
       <div
         ref={proformaRef}
-        className="mx-auto w-full max-w-[800px] bg-white p-4 rounded"
+        className="mx-auto w-full max-w-[750px] bg-white p-4 rounded"
       >
         <Header />
 

@@ -89,9 +89,9 @@ const descargarComoJPG = async () => {
 
     // Forzar ancho fijo temporal mientras se genera el canvas
     const originalStyle = proformaRef.current.style.cssText;
-    proformaRef.current.style.width = "800px";
-    proformaRef.current.style.minWidth = "800px";
-    proformaRef.current.style.maxWidth = "800px";
+    proformaRef.current.style.width = "750px";
+    proformaRef.current.style.minWidth = "750px";
+    proformaRef.current.style.maxWidth = "750px";
     proformaRef.current.style.margin = "0 auto";
 
     // Esperar un instante para que el DOM se repinte
@@ -133,7 +133,7 @@ const descargarComoJPG = async () => {
 
   return (
     <div className="min-h-screen bg-white flex justify-center">
-      <div className="w-full max-w-[800px] mx-auto p-4">
+      <div className="w-full max-w-[750px] mx-auto p-4">
         <div className="mb-6 pb-6 border-b">
           <Button 
             variant="outline" 
@@ -150,7 +150,7 @@ const descargarComoJPG = async () => {
     className="
       proforma bg-white rounded-lg shadow-lg
       p-4 md:p-6 
-      w-[90vw] sm:w-[600px] md:w-[800px]
+      w-[90vw] sm:w-[600px] md:w-[750px]
       min-w-[360px]
       flex flex-col gap-4
       mx-auto
@@ -168,7 +168,7 @@ const descargarComoJPG = async () => {
   "
   style={{
     minWidth: "360px",
-    maxWidth: "800px",
+    maxWidth: "750px",
     flexWrap: "wrap",
   }}
 >
@@ -186,7 +186,7 @@ const descargarComoJPG = async () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -196,7 +196,7 @@ const descargarComoJPG = async () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -206,7 +206,7 @@ const descargarComoJPG = async () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[420px]"
                   />
                 </div>
                 <div>
@@ -223,7 +223,7 @@ const descargarComoJPG = async () => {
 
           {/* Tabla de productos */}
           <div className="mb-6 w-full">
-            <Table className="w-full table-fixed min-w-[360px] max-w-[800px]">
+            <Table className="w-full table-fixed min-w-[360px] max-w-[750px]">
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
@@ -277,7 +277,7 @@ const descargarComoJPG = async () => {
           </div>
 
           {/* Totales */}
-          <div className="fflex flex-col items-end space-y-2 mb-6 w-full max-w-[800px] mx-auto">
+          <div className="fflex flex-col items-end space-y-2 mb-6 w-full max-w-[750px] mx-auto">
             <div className="bg-allis-celeste py-2 px-4 rounded w-full md:w-64">
               <div className="flex justify-between">
                 <span className="font-medium">SUBTOTAL:</span>
