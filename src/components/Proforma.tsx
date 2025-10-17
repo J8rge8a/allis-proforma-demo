@@ -78,50 +78,58 @@ const Proforma: React.FC = () => {
   };
 
   // Descargar la proforma como imagen JPG
-  const descargarComoJPG = async () => {
-    if (!proformaRef.current) return;
+const descargarComoJPG = async () => {
+  if (!proformaRef.current) return;
 
-    try {
-      toast({
-        title: "Procesando",
-        description: "Generando imagen de la proforma...",
-      });
-      
-// Captura con ancho fijo (mismo tamaño en móvil y escritorio)
-const exportWidth = 800; // ancho fijo de exportación (px)
-const scaleFactor = exportWidth / proformaRef.current.offsetWidth;
+  try {
+    toast({
+      title: "Procesando",
+      description: "Generando imagen de la proforma...",
+    });
 
-const canvas = await html2canvas(proformaRef.current, {
-  scale: 2 * scaleFactor, // asegura buena calidad
-  useCORS: true,
-  logging: false,
-  backgroundColor: "#ffffff",
-  width: exportWidth,
-  height: proformaRef.current.scrollHeight * scaleFactor,
-});
-      
-      const image = canvas.toDataURL("image/jpeg", 0.9);
-      
-      const link = document.createElement("a");
-      link.download = `Proforma_Allis_${new Date().toISOString().split('T')[0]}.jpg`;
-      link.href = image;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      toast({
-        title: "¡Éxito!",
-        description: "Proforma descargada como imagen JPG.",
-      });
-    } catch (error) {
-      console.error("Error al generar la imagen:", error);
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "No se pudo generar la imagen. Intente nuevamente.",
-      });
-    }
-  };
+    // Forzar ancho fijo temporal mientras se genera el canvas
+    const originalStyle = proformaRef.current.style.cssText;
+    proformaRef.current.style.width = "800px";
+    proformaRef.current.style.minWidth = "800px";
+    proformaRef.current.style.maxWidth = "800px";
+    proformaRef.current.style.margin = "0 auto";
+
+    // Esperar un instante para que el DOM se repinte
+    await new Promise((r) => setTimeout(r, 100));
+
+    const canvas = await html2canvas(proformaRef.current, {
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      backgroundColor: "#ffffff",
+      scrollX: 0,
+      scrollY: 0,
+    });
+
+    // Restaurar estilos originales para mantener la vista responsive
+    proformaRef.current.style.cssText = originalStyle;
+
+    const image = canvas.toDataURL("image/jpeg", 0.9);
+    const link = document.createElement("a");
+    link.download = `Proforma_Allis_${new Date().toISOString().split("T")[0]}.jpg`;
+    link.href = image;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast({
+      title: "¡Éxito!",
+      description: "Proforma descargada como imagen JPG.",
+    });
+  } catch (error) {
+    console.error("Error al generar la imagen:", error);
+    toast({
+      variant: "destructive",
+      title: "Error",
+      description: "No se pudo generar la imagen. Intente nuevamente.",
+    });
+  }
+};
 
   return (
     <div className="min-h-screen bg-white flex justify-center">
