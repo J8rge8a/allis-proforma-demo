@@ -17,7 +17,7 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
   const { toast } = useToast();
   
   // Contraseña correcta
-  const correctPassword = 'allis123';
+  const correctPassword = '1234';
   
   // Verificar si está bloqueado al cargar
   useEffect(() => {
@@ -104,6 +104,15 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
             {locked ? "Sistema bloqueado" : "Ingresar"}
           </Button>
         </CardFooter>
+        {/* Mensaje visual de versión demo */}
+<div className="mt-6 text-center text-sm text-gray-500">
+  🔒 <strong>Versión DEMO</strong> — Clave pública de acceso:{" "}
+  <span className="font-semibold text-gray-700">1234</span>
+  <br />
+  <span className="text-gray-400">
+    Esta aplicación es una demo abierta y auditable. No genera facturas reales.
+  </span>
+</div>
       </Card>
       {locked && (
         <div className="mt-4 p-3 bg-destructive/10 text-destructive rounded">
