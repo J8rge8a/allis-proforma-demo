@@ -48,7 +48,7 @@ export function ProductsTable({
             return (
               <tr key={i} className={`even:bg-gray-50 ${ocultar} transition-colors`}>
                 {/* Producto (select) */}
-                <td className="border px-2 py-1 text-left">
+                <td className="border px-2 py-1 text-left w-[55px] sm:w-[70px]">
                   <select
                     value={r.codigo}
                     onChange={e => onProductChange(i, e.target.value)}
