@@ -88,10 +88,16 @@ const Proforma: React.FC = () => {
       });
       
       const canvas = await html2canvas(proformaRef.current, {
-        scale: 2, // Equivalente aproximado a 300 DPI
-        useCORS: true,
-        logging: false,
-        width: Math.min(proformaRef.current.offsetWidth, 1080),
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      backgroundColor: "#ffffff",
+      scrollX: 0,
+      scrollY: 0,
+      x: proformaRef.current.getBoundingClientRect().left,
+      y: proformaRef.current.getBoundingClientRect().top,
+      width: proformaRef.current.scrollWidth,
+      height: proformaRef.current.scrollHeight,
       });
       
       const image = canvas.toDataURL("image/jpeg", 0.9);
@@ -186,7 +192,7 @@ const Proforma: React.FC = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="mb-6 overflow-x-auto w-full max-w-[800px] mx-auto">
+          <div className="mb-6 overflow-x-auto w-full min-w-[600px] max-w-full">
             <Table>
               <TableHeader>
                 <TableRow>
