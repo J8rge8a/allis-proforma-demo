@@ -82,25 +82,52 @@ export default function Index() {
         'input, select'
       )
     )
-    const backups = elements.map(el => {
-      const span = document.createElement('span')
-      if (el instanceof HTMLInputElement) {
-        span.textContent = el.value
-      } else {
-      const selectedText = el.options[el.selectedIndex]?.text || ''
-      span.textContent = selectedText
+    // Reemplazar inputs/selects por spans visuales
+const backups = elements.map(el => {
+  const span = document.createElement('span')
 
-      // Si el select no tiene valor (está en "--Selecciona--"), ocultarlo en exportación
-        if (el.value === '') {
-        span.style.color = '#ffffff' // blanco para fondo blanco
+  // ✅ Detectar si el input pertenece al encabezado
+  const isHeaderField =
+  (el instanceof HTMLInputElement &&
+    (
+      el.id === 'cliente' ||
+      el.placeholder === 'Municipio' ||
+      el.placeholder === 'Teléfono'
+    )) ||
+  el.closest('header')
+
+  // Copiar texto visible
+  if (el instanceof HTMLInputElement) {
+    span.textContent = el.value
+  } else {
+    const selectedText = el.options[el.selectedIndex]?.text || ''
+    span.textContent = selectedText
+    if (el.value === '') span.style.color = '#ffffff'
   }
-      }
-      span.className = el.className
-      span.style.cssText = getComputedStyle(el).cssText
-      el.style.display = 'none'
-      el.parentElement?.appendChild(span)
-      return { el, span }
-    })
+
+  // Copiar estilos base
+  span.className = el.className
+  span.style.cssText = getComputedStyle(el).cssText
+
+  // 🔧 Si está en el encabezado, mantener el ancho exacto
+  if (isHeaderField) {
+    const rect = el.getBoundingClientRect()
+    span.style.display = 'inline-block'
+    span.style.width = `${rect.width}px`
+    span.style.height = `${rect.height}px`
+    span.style.lineHeight = `${rect.height}px`
+    span.style.boxSizing = 'border-box'
+    span.style.overflow = 'hidden'
+    span.style.textAlign = 'right'
+    span.style.whiteSpace = 'nowrap'
+  }
+
+  // Ocultar input original y mostrar span temporal
+  el.style.display = 'none'
+  el.parentElement?.appendChild(span)
+
+  return { el, span }
+})
 
     const canvas = await html2canvas(container, {
       scale: 2,
