@@ -230,7 +230,7 @@ const Proforma: React.FC = () => {
                           value={(producto.cantidad || 0) > 0 ? producto.cantidad : ""}
                           onChange={(e) => handleCantidadChange(producto.codigo, e.target.value)}
                           placeholder="0"
-                          className="w-full"
+                          className="w-[60px] text-center"
                         />
                       </TableCell>
                       <TableCell>
