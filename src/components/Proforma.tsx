@@ -295,9 +295,8 @@ const descargarComoJPG = async () => {
           {/* Footer */}
           <footer className="mt-8 pt-4 border-t text-center text-sm text-gray-500">
             <p className="font-medium mb-1">Alli's Helados y Snacks</p>
-            <p>Vendedor: María Fernanda López</p>
-            <p>Teléfono: +505 8765-4321</p>
-            <p>Email: ventas@allishelados.com</p>
+            <p>Vendedor: Sandra Morazan</p>
+            <p>Teléfono: +505 5887-1570</p>
             <p className="mt-2">¡Gracias por su preferencia!</p>
           </footer>
         </div>
