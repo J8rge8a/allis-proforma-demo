@@ -177,7 +177,7 @@ const backups = elements.map(el => {
         />
 
         <div className="flex justify-end pr-4 mt-4">
-          <div className="bg-allis-celeste p-1.5 rounded shadow w-full max-w-[750px] text-right">
+          <div className="bg-allis-celeste p-1.5 sm:p-2 rounded shadow w-full text-right mx-auto max-w-[750px]">
             <span className="font-semibold">Total:</span>{' '}
             <span className="font-bold">C${total}</span>
           </div>

@@ -15,9 +15,9 @@ export function Header() {
 <header
   className="
     w-full 
-    min-w-[320px] max-w-[800px]
+    max-w-[750px]
     flex flex-row justify-between items-start
-    flex-wrap md:flex-nowrap
+    flex-wrap
     p-4 bg-white shadow-sm gap-4 
     mx-auto
   "
