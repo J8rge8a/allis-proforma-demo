@@ -156,7 +156,7 @@ const Proforma: React.FC = () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white text-right"
+                    className="bg-white text-right h-10 text-[15px] px-3"
                   />
                 </div>
                 <div>
@@ -166,7 +166,7 @@ const Proforma: React.FC = () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white text-right"
+                    className="bg-white text-right h-10 text-[15px] px-3"
                   />
                 </div>
                 <div>
@@ -176,7 +176,7 @@ const Proforma: React.FC = () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white text-right"
+                    className="bg-white text-right h-10 text-[15px] px-3"
                   />
                 </div>
                 <div>
