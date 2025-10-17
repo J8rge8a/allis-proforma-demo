@@ -34,10 +34,10 @@ export function ProductsTable({
       <table className="w-full table-fixed text-sm sm:text-base border-collapse">
         <thead>
           <tr className="bg-allis-celeste">
-            <th className="px-2 py-1 text-center whitespace-nowrap">Producto</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap">Cantidad</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap">P/U</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap">P/T</th>
+            <th className="px-2 py-1 text-left whitespace-nowrap w-[220px] sm:w-[250px]">Producto</th>
+            <th className="px-1 py-1 text-center whitespace-nowrap w-[60px] sm:w-[70px]">Cant.</th>
+            <th className="px-2 py-1 text-right whitespace-nowrap w-[75px] sm:w-[85px]">P/U</th>
+            <th className="px-2 py-1 text-right whitespace-nowrap w-[85px] sm:w-[95px]">P/T</th>
           </tr>
         </thead>
         <tbody>
