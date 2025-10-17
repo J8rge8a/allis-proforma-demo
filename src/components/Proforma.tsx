@@ -161,18 +161,19 @@ const descargarComoJPG = async () => {
           {/* Encabezado con logo y datos de cliente */}
           <div
   className="
-    flex flex-row justify-between items-start
+    flex flex-col xs:flex-row justify-between items-start xs:items-center
     mb-6 pb-4 border-b
     w-full
+    gap-4
   "
   style={{
     minWidth: "360px",
-    flexWrap: "nowrap",
-    alignItems: "flex-start",
+    maxWidth: "800px",
+    flexWrap: "wrap",
   }}
 >
             <div className="flex items-center mb-4 md:mb-0">
-              <img src={logo} alt="Alli's" className="h-16 md:h-20" />
+              <img src={logo} alt="Alli's" className="h-12 xs:h-14 sm:h-16 md:h-20" />
             </div>
             
             <div className="bg-allis-amarillo p-4 rounded-lg">
@@ -185,7 +186,7 @@ const descargarComoJPG = async () => {
                     value={cliente.nombre}
                     onChange={handleClienteChange}
                     placeholder="Nombre del cliente"
-                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
                   />
                 </div>
                 <div>
@@ -195,7 +196,7 @@ const descargarComoJPG = async () => {
                     value={cliente.municipio}
                     onChange={handleClienteChange}
                     placeholder="Municipio"
-                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
                   />
                 </div>
                 <div>
@@ -205,7 +206,7 @@ const descargarComoJPG = async () => {
                     value={cliente.telefono}
                     onChange={handleClienteChange}
                     placeholder="Número de teléfono"
-                    className="bg-white text-right h-10 text-[15px] px-3 max-w-[160px] sm:max-w-[200px]"
+                    className="bg-white text-right h-10 text-[15px] px-3 w-full xs:max-w-[220px]"
                   />
                 </div>
                 <div>
