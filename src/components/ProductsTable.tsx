@@ -36,8 +36,8 @@ export function ProductsTable({
           <tr className="bg-allis-celeste">
             <th className="px-2 py-1 text-left whitespace-nowrap w-[100px] sm:w-[170px]">Producto</th>
             <th className="px-1 py-1 text-center whitespace-nowrap w-[60px] sm:w-[70px]">Cant.</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap w-[75px] sm:w-[80px]">P/U</th>
-            <th className="px-2 py-1 text-center whitespace-nowrap w-[85px] sm:w-[90px]">P/T</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap w-[75px] sm:w-[70px]">P/U</th>
+            <th className="px-2 py-1 text-center whitespace-nowrap w-[85px] sm:w-[80px]">P/T</th>
           </tr>
         </thead>
         <tbody>
