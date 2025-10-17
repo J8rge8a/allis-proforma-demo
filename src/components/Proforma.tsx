@@ -197,11 +197,11 @@ const Proforma: React.FC = () => {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
-                  <TableHead className="w-[180px] md:w-[200px]">Producto</TableHead>
+                  <TableHead className="w-[160px] md:w-[180px] text-left truncate">Producto</TableHead>
                   <TableHead className="w-[80px]">UM</TableHead>
-                  <TableHead className="w-[60px]">Cantidad</TableHead>
-                  <TableHead className="w-[60px]">P/U (C$)</TableHead>
-                  <TableHead className="w-[60px]">P/T (C$)</TableHead>
+                  <TableHead className="w-[60px] text-center">Cantidad</TableHead>
+                  <TableHead className="w-[100px] text-right">P/U</TableHead>
+                  <TableHead className="w-[110px] text-right pr-4">P/T</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
