@@ -30,7 +30,14 @@ export function ProductsTable({
   isExporting,
 }: Props) {
   return (
-    <div className="overflow-x-auto w-full">
+        <div
+      className="
+        w-full 
+        min-w-[380px] max-w-[800px] 
+        mx-auto overflow-x-auto
+        bg-white shadow rounded
+      "
+    >
       <table className="w-full table-auto text-base bg-white shadow rounded">
         <thead>
           <tr className="bg-allis-celeste">

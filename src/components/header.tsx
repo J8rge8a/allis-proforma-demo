@@ -12,7 +12,15 @@ export function Header() {
   }, [])
 
   return (
-    <header className="w-full flex items-start justify-between p-4 bg-white shadow-sm">
+        <header
+      className="
+        w-full 
+        min-w-[380px] max-w-[800px]
+        flex flex-col sm:flex-row sm:items-start sm:justify-between 
+        p-4 bg-white shadow-sm gap-4 
+        mx-auto
+      "
+    >
       {/* Columna izquierda: logo, PROFORMA y fecha */}
       <div className="flex-shrink-0 flex flex-col items-center">
         <img
