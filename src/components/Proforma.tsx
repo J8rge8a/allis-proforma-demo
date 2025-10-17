@@ -236,7 +236,7 @@ const Proforma: React.FC = () => {
                       <TableCell>
                         {producto.precio.toFixed(2)}
                       </TableCell>
-                      <TableCell>
+                      <TableCell className="text-right pr-2">
                         {subtotal.toFixed(2)}
                       </TableCell>
                     </TableRow>
