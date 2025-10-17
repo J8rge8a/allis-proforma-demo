@@ -64,7 +64,7 @@ export function ProductsTable({
                 </td>
 
                 {/* Cantidad */}
-                <td className="border px-1 py-1 text-center w-[55px] sm:w-[65px]">
+                <td className="border px-1 py-1 text-center w-[55px] sm:w-[70px]">
                   <input
                     type="number"
                     min={0}
@@ -83,7 +83,7 @@ export function ProductsTable({
                 </td>
 
                 {/* P/T */}
-                <td className="border px-2 py-1 text-right pr-3 w-[90px] sm:w-[100px]">
+                <td className="border px-2 py-1 text-right pr-3 w-[80px] sm:w-[90px]">
                   C$ {pt.toFixed(2)}
                 </td>
               </tr>
