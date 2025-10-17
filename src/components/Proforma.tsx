@@ -144,12 +144,28 @@ const descargarComoJPG = async () => {
           </Button>
         </div>
 
-        <div 
-          ref={proformaRef} 
-          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[800px] mx-auto overflow-hidden"
+        <div className="w-full flex justify-center">
+          <div
+          ref={proformaRef}
+          className="
+          proforma bg-white rounded-lg shadow-lg
+          p-4 md:p-6 
+          w-full max-w-[800px] min-w-[360px]
+          flex flex-col gap-4
+          scale-[0.98] sm:scale-100
+          transition-transform
+        "
         >
+    </div>  
           {/* Encabezado con logo y datos de cliente */}
-          <div className="flex flex-col md:flex-row justify-between mb-6 pb-4 border-b">
+          <div
+          className="
+          flex flex-row justify-between items-start
+          min-w-[650px] sm:min-w-[700px]
+          mb-6 pb-4 border-b
+          overflow-x-auto
+        "
+      >
             <div className="flex items-center mb-4 md:mb-0">
               <img src={logo} alt="Alli's" className="h-16 md:h-20" />
             </div>
@@ -200,8 +216,8 @@ const descargarComoJPG = async () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="mb-6 w-full overflow-x-hidden">
-            <Table className="w-full table-fixed">
+          <div className="mb-6 w-full">
+            <Table className="w-full table-fixed min-w-[360px] max-w-[800px]">
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
