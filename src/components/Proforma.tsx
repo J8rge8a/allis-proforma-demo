@@ -138,7 +138,7 @@ const Proforma: React.FC = () => {
 
         <div 
           ref={proformaRef} 
-          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[800px] mx-auto"
+          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[760px] mx-auto box-border overflow-hidden"
         >
           {/* Encabezado con logo y datos de cliente */}
           <div className="flex flex-col md:flex-row justify-between mb-6 pb-4 border-b">
