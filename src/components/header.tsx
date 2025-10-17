@@ -15,11 +15,16 @@ export function Header() {
 <header
   className="
     w-full 
-    max-w-[800px]
-    flex flex-col sm:flex-row sm:items-start sm:justify-between 
-    p-3 sm:p-4 bg-white shadow-sm gap-4 
+    min-w-[360px] max-w-[800px]
+    flex flex-row justify-between items-start
+    flex-wrap
+    p-4 bg-white shadow-sm gap-4 
     mx-auto
   "
+  style={{
+    flexWrap: 'nowrap',
+    overflow: 'hidden',
+  }}
 >
       {/* Columna izquierda: logo, PROFORMA y fecha */}
       <div className="flex-shrink-0 flex flex-col items-center">
