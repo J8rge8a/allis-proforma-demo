@@ -138,7 +138,7 @@ const Proforma: React.FC = () => {
 
         <div 
           ref={proformaRef} 
-          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[760px] mx-auto box-border overflow-hidden"
+          className="proforma bg-white rounded-lg shadow-lg p-4 md:p-6 w-full max-w-[800px] mx-auto overflow-hidden"
         >
           {/* Encabezado con logo y datos de cliente */}
           <div className="flex flex-col md:flex-row justify-between mb-6 pb-4 border-b">
@@ -192,8 +192,8 @@ const Proforma: React.FC = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="mb-6 overflow-x-auto w-full min-w-[600px] max-w-full">
-            <Table>
+          <div className="mb-6 w-full overflow-x-hidden">
+            <Table className="w-full table-fixed">
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[80px]">Código</TableHead>
