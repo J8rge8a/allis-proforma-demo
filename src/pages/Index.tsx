@@ -111,15 +111,17 @@ const backups = elements.map(el => {
 
   // 🔧 Si está en el encabezado, mantener el ancho exacto
   if (isHeaderField) {
-    const rect = el.getBoundingClientRect()
-    span.style.display = 'inline-block'
-    span.style.width = `${rect.width}px`
-    span.style.height = `${rect.height}px`
-    span.style.lineHeight = `${rect.height}px`
-    span.style.boxSizing = 'border-box'
-    span.style.overflow = 'hidden'
-    span.style.textAlign = 'right'
-    span.style.whiteSpace = 'nowrap'
+  const rect = el.getBoundingClientRect()
+  span.style.display = 'flex'
+  span.style.alignItems = 'center'
+  span.style.justifyContent = 'flex-end' // texto a la derecha
+  span.style.width = `${rect.width}px`
+  span.style.height = `${rect.height}px`
+  span.style.boxSizing = 'border-box'
+  span.style.overflow = 'hidden'
+  span.style.textAlign = 'right'
+  span.style.whiteSpace = 'nowrap'
+  span.style.paddingRight = '6px' // mantiene margen interior como input
   }
 
   // Ocultar input original y mostrar span temporal
